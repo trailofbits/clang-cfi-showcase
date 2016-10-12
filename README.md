@@ -19,7 +19,7 @@ Each example builds two binaries, one with CFI protection (e.g. `cfi_icall`) and
 * **cfi_nvcall** shows clang’s protections for calling non-virtual member functions via something that is not an object that has those functions defined.
 * **cfi_unrelated_cast** shows how clang can prevent casts between objects of unrelated types.
 * **cfi_derived_cast** expands on cfi_unrelated_cast and shows how clang can prevent casts from an object of a base class to an object of a derived class, if the object is not actually of the derived class.
-* **cfi_cast_strict** is a stricter version of cfi_derived_cast that may be incompatible with some applications.
+* **cfi_cast_strict** showcases the very specific instance where the default level of base-to-derived cast protection, like in cfi_derived_cast, would not catch an illegal cast.
 
 # Requirements
 
