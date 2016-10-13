@@ -1,0 +1,12 @@
+cfi_icall
+no_cfi_icall
+cfi_vcall
+no_cfi_vcall
+cfi_nvcall
+no_cfi_nvcall
+cfi_unrelated_cast
+no_cfi_unrelated_cast
+cfi_cast_strict
+cfi_derived_cast
+no_cfi_cast_strict
+no_cfi_derived_cast
