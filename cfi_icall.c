@@ -73,6 +73,12 @@ int main(int argc, const char *argv[]) {
         printf("\t3\tCall into the middle of a function\n");
         printf("\n");
         printf("\tAll other options are undefined, but should be caught by CFI :)\n");
+        printf("\n\n");
+        printf("Here are some pointers so clang doesn't optimize away members of `struct foo f`:\n");
+        printf("\tint_funcs: %p\n", (void*)f.int_funcs);
+        printf("\tbad_int_funcs: %p\n", (void*)f.bad_int_funcs);
+        printf("\tfloat_funcs: %p\n", (void*)f.float_funcs);
+        printf("\tnot_entries: %p\n", (void*)f.not_entries);
         return 1;
     }
 
