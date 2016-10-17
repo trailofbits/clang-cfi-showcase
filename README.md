@@ -39,7 +39,7 @@ The following commands should install clang 3.9 on Ubuntu-based Linux distriutio
     sudo apt-get install -y clang-3.9
 
 ## Installing clang 3.9 on MacOS
-The following instructions work to install clang 3.9 on MacOS 10.11 (El Capitan) and MacOS 10.12 (Sierra). These instructions are adapted from [this stack overflow post](https://github.com/explosion/spaCy/issues/267).
+The following instructions work to install clang 3.9 on MacOS 10.11 (El Capitan) and MacOS 10.12 (Sierra). These instructions are adapted from [this Github issues post](https://github.com/explosion/spaCy/issues/267).
 
     curl -O http://llvm.org/releases/3.9.0/clang+llvm-3.9.0-x86_64-apple-darwin.tar.xz
     tar xJf clang+llvm-3.9.0-x86_64-apple-darwin.tar.xz
