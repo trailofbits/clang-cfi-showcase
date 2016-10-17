@@ -2,7 +2,7 @@
 
 [Control flow integrity](https://www.microsoft.com/en-us/research/publication/control-flow-integrity/) is an exploit mitigation, like stack cookies, DEP, and ASLR. Like other exploit mitigations, the goal of CFI is to prevent bugs from turning into exploits. CFI works by reducing the ability of an attacker to redirect program execution to an attacker controlled destination.
 
-We have created samples with specially crafted bugs to showcase clang's control flow integrity implementation. These examples are an accompaniment to [our blog post describing CFI in clang](http://blog-post-URL).
+We have created samples with specially crafted bugs to showcase clang's control flow integrity implementation. These examples are an accompaniment to [our blog post describing CFI in clang](https://blog.trailofbits.com/2016/10/17/lets-talk-about-cfi-clang-edition/).
 
 All of the samples are designed to compile **cleanly** with the absolute maximum warning level* (`-Weverything`).
 
