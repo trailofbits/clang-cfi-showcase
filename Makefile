@@ -57,7 +57,7 @@ cfi_cast_strict: cfi_cast_strict.cpp
 
 no_cfi_cast_strict: cfi_cast_strict.cpp
 	@echo Compiling $< to $@
-	@# stil use cfi-derived-cast, just not the strict version to
+	@# still use cfi-derived-cast, just not the strict version to
 	@# show the strict version behavior
 	@$(CXX) $(CXXFLAGS) -fsanitize=cfi-derived-cast -o $@ $<
 
