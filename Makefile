@@ -1,6 +1,6 @@
 CXX = clang++-3.9
 CC = clang-3.9
-GOLD = $(shell pwd)/gold
+GOLD = $(shell pwd)/ld
 CFLAGS = -B${GOLD} -Weverything -Werror -pedantic -std=c99 -O0 -fvisibility=hidden -flto -fno-sanitize-trap=all 
 CXXFLAGS = -B${GOLD} -Weverything -Werror -pedantic -Wno-c++98-compat -Wno-weak-vtables -std=c++11 -O0 -fvisibility=hidden -flto -fno-sanitize-trap=all 
 
@@ -57,7 +57,7 @@ cfi_cast_strict: cfi_cast_strict.cpp
 
 no_cfi_cast_strict: cfi_cast_strict.cpp
 	@echo Compiling $< to $@
-	@# stil use cfi-derived-cast, just not the strict version to
+	@# still use cfi-derived-cast, just not the strict version to
 	@# show the strict version behavior
 	@$(CXX) $(CXXFLAGS) -fsanitize=cfi-derived-cast -o $@ $<
 
