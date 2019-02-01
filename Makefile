@@ -1,15 +1,18 @@
-CXX = clang++-3.9
-CC = clang-3.9
+CXX = clang++
+CC = clang
 GOLD = $(shell pwd)/ld
 CFLAGS = -B${GOLD} -Weverything -Werror -pedantic -std=c99 -O0 -fvisibility=hidden -flto -fno-sanitize-trap=all 
 CXXFLAGS = -B${GOLD} -Weverything -Werror -pedantic -Wno-c++98-compat -Wno-weak-vtables -std=c++11 -O0 -fvisibility=hidden -flto -fno-sanitize-trap=all 
 
-CFI_TARGETS = cfi_icall cfi_vcall cfi_nvcall cfi_unrelated_cast cfi_derived_cast cfi_cast_strict
+CFI_TARGETS = check_clang_version cfi_icall cfi_vcall cfi_nvcall cfi_unrelated_cast cfi_derived_cast cfi_cast_strict
 NO_CFI_TARGETS = $(addprefix no_, $(CFI_TARGETS))
 
 TARGETS = $(CFI_TARGETS) $(NO_CFI_TARGETS)
 
 all: $(TARGETS)
+
+check_clang_version:
+	dpkg --compare-versions "$(shell ${CC} -dumpversion)" "ge" "3.9"
 
 cfi_icall: cfi_icall.c
 	@echo Compiling $< to $@
